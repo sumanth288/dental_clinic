@@ -54,7 +54,6 @@ def appointment():
             flash('Failed to send appointment request. Please try again later.', 'danger')
         return redirect(url_for('appointment'))
     return render_template('appointment.html')
-import pdb
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
@@ -67,7 +66,6 @@ def contact():
         Message: {data.get('message', '')}
         """
         try:
-            pdb.set_trace()
             msg = Message(subject, recipients=['sumanthreddy112000@gmail.com'], body=body)
             mail.send(msg)
             flash('Your message has been sent successfully!', 'success')
