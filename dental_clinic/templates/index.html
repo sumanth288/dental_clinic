@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+
+{% block title %}Ramana's Dental & Implant Centre - Your Smile, Our Priority{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-content fade-in-up">
+            <h1 class="hero-title">RAMANA'S DENTAL & IMPLANT CENTRE</h1>
+            <p class="hero-subtitle">Professional Dental Care with Advanced Technology. Experience exceptional dental care with our team of skilled professionals using the latest technology for your perfect smile.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="{{ url_for('appointment') }}" class="btn btn-primary btn-lg">
+                    <i class="bi bi-calendar-check me-2"></i>Book Appointment
+                </a>
+                <a href="{{ url_for('services') }}" class="btn btn-outline-primary btn-lg">
+                    <i class="bi bi-info-circle me-2"></i>Our Services
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Overview -->
+<section class="py-5">
+    <div class="container">
+        <div class="glass-card mb-5">
+            <div class="text-center">
+                <h2 class="display-5 fw-bold mb-4">Our Services</h2>
+                <p class="lead mb-0">Comprehensive dental care solutions tailored to your needs</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-tooth"></i>
+                    </div>
+                    <h3 class="service-title">Root Canal Treatment</h3>
+                    <p class="service-description">Advanced endodontic treatment to save damaged teeth and relieve pain.</p>
+                    <div class="service-price">Advanced Technology</div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-stars"></i>
+                    </div>
+                    <h3 class="service-title">Smile Designing</h3>
+                    <p class="service-description">Transform your smile with our comprehensive cosmetic dentistry services.</p>
+                    <div class="service-price">Customized Plans</div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-brightness-high"></i>
+                    </div>
+                    <h3 class="service-title">Teeth Whitening</h3>
+                    <p class="service-description">Professional teeth whitening services to brighten your smile.</p>
+                    <div class="service-price">Professional Grade</div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-gear"></i>
+                    </div>
+                    <h3 class="service-title">Dental Implants</h3>
+                    <p class="service-description">Permanent tooth replacement solutions with dental implants.</p>
+                    <div class="service-price">Permanent Solution</div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-heart"></i>
+                    </div>
+                    <h3 class="service-title">Child Care</h3>
+                    <p class="service-description">Specialized dental care for children in a friendly environment.</p>
+                    <div class="service-price">Child-Friendly</div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-diamond"></i>
+                    </div>
+                    <h3 class="service-title">Crown & Bridges</h3>
+                    <p class="service-description">Restore damaged teeth with high-quality crowns and bridges.</p>
+                    <div class="service-price">Durable Materials</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <a href="{{ url_for('services') }}" class="btn btn-primary btn-lg">
+                View All Services
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="py-5" style="background: rgba(255,255,255,0.1);">
+    <div class="container">
+        <div class="glass-card mb-5">
+            <div class="text-center">
+                <h2 class="display-5 fw-bold mb-4">Why Choose Ramana's Dental & Implant Centre?</h2>
+                <p class="lead mb-0">Experience the difference with our commitment to excellence</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card text-center">
+                    <div class="service-icon">
+                        <i class="bi bi-award"></i>
+                    </div>
+                    <h4 class="service-title">Qualified Team</h4>
+                    <p class="service-description">All our dentists are B.D.S qualified with years of clinical experience.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card text-center">
+                    <div class="service-icon">
+                        <i class="bi bi-gear-wide-connected"></i>
+                    </div>
+                    <h4 class="service-title">Modern Technology</h4>
+                    <p class="service-description">State-of-the-art equipment and advanced techniques for precise treatments.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card text-center">
+                    <div class="service-icon">
+                        <i class="bi bi-heart"></i>
+                    </div>
+                    <h4 class="service-title">Patient Care</h4>
+                    <p class="service-description">Compassionate care in a comfortable and welcoming environment.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card text-center">
+                    <div class="service-icon">
+                        <i class="bi bi-clock"></i>
+                    </div>
+                    <h4 class="service-title">Extended Hours</h4>
+                    <p class="service-description">Open from 10:00 AM to 10:00 PM for your convenience.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5">
+    <div class="container">
+        <div class="glass-card text-center">
+            <h2 class="display-5 fw-bold mb-4">Ready for Your Perfect Smile?</h2>
+            <p class="lead mb-4">Book your appointment today and take the first step towards a healthier, more beautiful smile.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="{{ url_for('appointment') }}" class="btn btn-primary btn-lg">
+                    <i class="bi bi-calendar-check me-2"></i>Book Now
+                </a>
+                <a href="{{ url_for('contact') }}" class="btn btn-outline-primary btn-lg">
+                    <i class="bi bi-telephone me-2"></i>Call Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

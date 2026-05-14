@@ -1,0 +1,243 @@
+{% extends "base.html" %}
+
+{% block title %}Our Services - Ramana's Dental & Implant Centre{% endblock %}
+
+{% block content %}
+<!-- Services Header -->
+<section class="py-5">
+    <div class="container">
+        <div class="glass-card mb-5">
+            <div class="text-center">
+                <h1 class="display-5 fw-bold mb-4">Our Dental Services</h1>
+                <p class="lead mb-0">Comprehensive dental care solutions to keep your smile healthy and beautiful</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-6 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-tooth"></i>
+                    </div>
+                    <h3 class="service-title">Root Canal Treatment</h3>
+                    <p class="service-description">Advanced endodontic treatment to save damaged teeth and relieve pain. Our experienced dentists use modern techniques to ensure comfortable and effective root canal procedures.</p>
+                    <div class="service-price mb-3">Advanced Technology</div>
+                    <a href="{{ url_for('appointment') }}" class="btn btn-outline-primary">
+                        <i class="bi bi-calendar-check me-2"></i>Book Appointment
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-stars"></i>
+                    </div>
+                    <h3 class="service-title">Smile Designing</h3>
+                    <p class="service-description">Transform your smile with our comprehensive cosmetic dentistry services. We create personalized treatment plans to achieve your dream smile.</p>
+                    <div class="service-price mb-3">Customized Plans</div>
+                    <a href="{{ url_for('appointment') }}" class="btn btn-outline-primary">
+                        <i class="bi bi-calendar-check me-2"></i>Book Appointment
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-brightness-high"></i>
+                    </div>
+                    <h3 class="service-title">Teeth Whitening</h3>
+                    <p class="service-description">Professional teeth whitening services to brighten your smile. Safe and effective treatments for a more confident appearance.</p>
+                    <div class="service-price mb-3">Professional Grade</div>
+                    <a href="{{ url_for('appointment') }}" class="btn btn-outline-primary">
+                        <i class="bi bi-calendar-check me-2"></i>Book Appointment
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-gear"></i>
+                    </div>
+                    <h3 class="service-title">Dental Implants</h3>
+                    <p class="service-description">Permanent tooth replacement solutions with dental implants. Restore your smile and chewing function with our advanced implant technology.</p>
+                    <div class="service-price mb-3">Permanent Solution</div>
+                    <a href="{{ url_for('appointment') }}" class="btn btn-outline-primary">
+                        <i class="bi bi-calendar-check me-2"></i>Book Appointment
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-heart"></i>
+                    </div>
+                    <h3 class="service-title">Child Care</h3>
+                    <p class="service-description">Specialized dental care for children in a friendly and comfortable environment. We make dental visits enjoyable for kids.</p>
+                    <div class="service-price mb-3">Child-Friendly</div>
+                    <a href="{{ url_for('appointment') }}" class="btn btn-outline-primary">
+                        <i class="bi bi-calendar-check me-2"></i>Book Appointment
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-diamond"></i>
+                    </div>
+                    <h3 class="service-title">Crown & Bridges</h3>
+                    <p class="service-description">Restore damaged teeth with high-quality crowns and bridges. We use durable materials for long-lasting results.</p>
+                    <div class="service-price mb-3">Durable Materials</div>
+                    <a href="{{ url_for('appointment') }}" class="btn btn-outline-primary">
+                        <i class="bi bi-calendar-check me-2"></i>Book Appointment
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-layers"></i>
+                    </div>
+                    <h3 class="service-title">Fixed Dentures</h3>
+                    <p class="service-description">Secure and comfortable denture solutions that stay in place. Improve your confidence and eating ability.</p>
+                    <div class="service-price mb-3">Secure Fit</div>
+                    <a href="{{ url_for('appointment') }}" class="btn btn-outline-primary">
+                        <i class="bi bi-calendar-check me-2"></i>Book Appointment
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-arrow-left-right"></i>
+                    </div>
+                    <h3 class="service-title">Orthodontic Treatment</h3>
+                    <p class="service-description">Straighten your teeth with braces and other orthodontic treatments. Achieve a perfectly aligned smile.</p>
+                    <div class="service-price mb-3">Customized Plans</div>
+                    <a href="{{ url_for('appointment') }}" class="btn btn-outline-primary">
+                        <i class="bi bi-calendar-check me-2"></i>Book Appointment
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-braces"></i>
+                    </div>
+                    <h3 class="service-title">Aligners</h3>
+                    <p class="service-description">Clear aligner therapy for straight teeth without traditional braces. Discreet and comfortable orthodontic treatment.</p>
+                    <div class="service-price mb-3">Clear & Discreet</div>
+                    <a href="{{ url_for('appointment') }}" class="btn btn-outline-primary">
+                        <i class="bi bi-calendar-check me-2"></i>Book Appointment
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Additional Services -->
+<section class="py-5" style="background: rgba(255,255,255,0.1);">
+    <div class="container">
+        <div class="glass-card mb-5">
+            <div class="text-center">
+                <h2 class="display-5 fw-bold mb-4">Specialized Treatments</h2>
+                <p class="lead mb-0">Advanced dental procedures for specific needs</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card text-center">
+                    <div class="service-icon">
+                        <i class="bi bi-droplet"></i>
+                    </div>
+                    <h4 class="service-title">Teeth Whitening</h4>
+                    <p class="service-description">Professional teeth whitening treatments for a brighter, more confident smile.</p>
+                    <div class="service-price">Professional Grade</div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card text-center">
+                    <div class="service-icon">
+                        <i class="bi bi-tools"></i>
+                    </div>
+                    <h4 class="service-title">Dental Implants</h4>
+                    <p class="service-description">Permanent tooth replacement solutions that look and feel like natural teeth.</p>
+                    <div class="service-price">Permanent Solution</div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card text-center">
+                    <div class="service-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h4 class="service-title">Root Canal Therapy</h4>
+                    <p class="service-description">Advanced endodontic treatment to save severely damaged or infected teeth.</p>
+                    <div class="service-price">Advanced Technology</div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card text-center">
+                    <div class="service-icon">
+                        <i class="bi bi-heart"></i>
+                    </div>
+                    <h4 class="service-title">Gum Disease Treatment</h4>
+                    <p class="service-description">Comprehensive periodontal care to maintain healthy gums and prevent tooth loss.</p>
+                    <div class="service-price">Comprehensive Care</div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card text-center">
+                    <div class="service-icon">
+                        <i class="bi bi-eye"></i>
+                    </div>
+                    <h4 class="service-title">Dental Veneers</h4>
+                    <p class="service-description">Thin porcelain shells to improve the appearance of damaged or discolored teeth.</p>
+                    <div class="service-price">Natural Appearance</div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card text-center">
+                    <div class="service-icon">
+                        <i class="bi bi-thermometer-half"></i>
+                    </div>
+                    <h4 class="service-title">Sedation Dentistry</h4>
+                    <p class="service-description">Comfortable dental care for patients with anxiety or special needs.</p>
+                    <div class="service-price">Comfortable Care</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5">
+    <div class="container">
+        <div class="glass-card text-center">
+            <h2 class="display-5 fw-bold mb-4">Ready to Transform Your Smile?</h2>
+            <p class="lead mb-4">Contact us today to schedule a consultation and learn more about our services.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="{{ url_for('appointment') }}" class="btn btn-primary btn-lg">
+                    <i class="bi bi-calendar-check me-2"></i>Book Consultation
+                </a>
+                <a href="{{ url_for('contact') }}" class="btn btn-outline-primary btn-lg">
+                    <i class="bi bi-telephone me-2"></i>Call Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

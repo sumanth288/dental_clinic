@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Ramana's Dental & Implant Centre{% endblock %}
+
+{% block content %}
+<!-- Contact Header -->
+<section class="py-5">
+    <div class="container">
+        <div class="glass-card mb-5">
+            <div class="text-center">
+                <h1 class="display-5 fw-bold mb-4">Contact Us</h1>
+                <p class="lead mb-0">Get in touch with us for any questions or concerns</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="glass-card h-100">
+                    <h2 class="h4 fw-bold mb-4">Send us a Message</h2>
+                    <form id="contactForm" class="needs-validation" novalidate method="POST">
+                        {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                        <div class="mb-3">
+                            {% for category, message in messages %}
+                            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                                {{ message }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                        {% endwith %}
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name *</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                            <div class="invalid-feedback">
+                                Please provide your name.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid email address.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject *</label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                            <div class="invalid-feedback">
+                                Please provide a subject.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            <div class="invalid-feedback">
+                                Please provide your message.
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-send me-2"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="glass-card h-100">
+                    <h2 class="h4 fw-bold mb-4">Contact Information</h2>
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="bi bi-geo-alt-fill text-primary fs-4 me-3"></i>
+                        <div>
+                            <h3 class="h6 fw-bold mb-1">Address</h3>
+                            <p class="mb-0">1st Floor, Near CBI Road, RT Nagar</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="bi bi-telephone-fill text-primary fs-4 me-3"></i>
+                        <div>
+                            <h3 class="h6 fw-bold mb-1">Phone</h3>
+                            <p class="mb-0">6304853230 / 8309718235</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="bi bi-envelope-fill text-primary fs-4 me-3"></i>
+                        <div>
+                            <h3 class="h6 fw-bold mb-1">Email</h3>
+                            <p class="mb-0">info@ramanasdental.com</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-clock-fill text-primary fs-4 me-3"></i>
+                        <div>
+                            <h3 class="h6 fw-bold mb-1">Hours</h3>
+                            <p class="mb-0">Monday - Sunday: 10:00 AM - 10:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="py-5" style="background: rgba(255,255,255,0.1);">
+    <div class="container">
+        <div class="glass-card">
+            <h2 class="h4 fw-bold mb-4 text-center">Find Us</h2>
+            <div class="ratio ratio-21x9">
+                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.30591910525!2d-74.25986432970718!3d40.697149422113014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1647043087964!5m2!1sen!2s" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.1495868007723!2d77.58985031128326!3d13.026144587241228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17b8bb2dba63%3A0x5f27b587643d5359!2sLancet%20Diagnostics%20Limited!5e0!3m2!1sen!2sin!4v1752315571845!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="glass-card mb-5">
+            <div class="text-center">
+                <h2 class="display-5 fw-bold mb-4">Frequently Asked Questions</h2>
+                <p class="lead mb-0">Find answers to common questions about our services</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="glass-card">
+                    <h4 class="h5 fw-bold mb-3">What should I bring to my first appointment?</h4>
+                    <p>Please bring your ID, insurance card (if applicable), and any previous dental records. Also, arrive 15 minutes early to complete new patient forms.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="glass-card">
+                    <h4 class="h5 fw-bold mb-3">Do you accept dental insurance?</h4>
+                    <p>Yes, we accept most major dental insurance plans. Please contact us with your specific insurance information for detailed coverage information.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="glass-card">
+                    <h4 class="h5 fw-bold mb-3">How often should I visit the dentist?</h4>
+                    <p>We recommend visiting the dentist every 6 months for regular checkups and cleanings. However, some patients may need more frequent visits based on their oral health.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="glass-card">
+                    <h4 class="h5 fw-bold mb-3">What if I have a dental emergency?</h4>
+                    <p>For dental emergencies, please call us immediately at 6304853230 or 8309718235. We provide emergency dental care during our clinic hours (10:00 AM - 10:00 PM).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

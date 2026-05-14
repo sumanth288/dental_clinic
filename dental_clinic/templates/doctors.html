@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+
+{% block title %}Our Doctors - Ramana's Dental & Implant Centre{% endblock %}
+
+{% block content %}
+<!-- Doctors Header -->
+<section class="py-5">
+    <div class="container">
+        <div class="glass-card mb-5">
+            <div class="text-center">
+                <h1 class="display-5 fw-bold mb-4">Meet Our Dental Team</h1>
+                <p class="lead mb-0">Experienced professionals dedicated to your oral health and beautiful smile</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="doctor-card">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Dr. Kutala Dinakar" class="doctor-image">
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">DR. KUTALA DINAKAR</h3>
+                        <p class="doctor-specialty">B.D.S - Dental Implants & Cosmetic Dentistry</p>
+                        <p class="doctor-experience">Specialist in Dental Implants & Cosmetic Dentistry</p>
+                        <p class="mb-3">Dr. Kutala Dinakar is a highly skilled dentist with extensive experience in dental implants and cosmetic dentistry. He specializes in creating beautiful smiles through advanced dental procedures.</p>
+                        <div class="d-flex justify-content-center gap-2">
+                            <a href="#" class="btn btn-outline-primary btn-sm">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-primary btn-sm">
+                                <i class="bi bi-envelope"></i>
+                            </a>
+                            <a href="{{ url_for('appointment') }}" class="btn btn-primary btn-sm">
+                                <i class="bi bi-calendar-check me-1"></i>Book
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="doctor-card">
+                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Dr. M. Sunil Reddy" class="doctor-image">
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">DR. M. SUNIL REDDY</h3>
+                        <p class="doctor-specialty">B.D.S - Root Canal Treatment & Endodontics</p>
+                        <p class="doctor-experience">Expert in Root Canal Treatment & Endodontics</p>
+                        <p class="mb-3">Dr. M. Sunil Reddy is an expert in endodontics and root canal treatments. With years of experience, he ensures pain-free and effective treatments for his patients.</p>
+                        <div class="d-flex justify-content-center gap-2">
+                            <a href="#" class="btn btn-outline-primary btn-sm">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-primary btn-sm">
+                                <i class="bi bi-envelope"></i>
+                            </a>
+                            <a href="{{ url_for('appointment') }}" class="btn btn-primary btn-sm">
+                                <i class="bi bi-calendar-check me-1"></i>Book
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="doctor-card">
+                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Dr. Md. Ezaz" class="doctor-image">
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">DR. MD. EZAZ</h3>
+                        <p class="doctor-specialty">B.D.S - Orthodontics & Child Dentistry</p>
+                        <p class="doctor-experience">Specialist in Orthodontics & Child Dentistry</p>
+                        <p class="mb-3">Dr. Md. Ezaz specializes in orthodontics and pediatric dentistry. He is dedicated to providing gentle and effective dental care for children and adults alike.</p>
+                        <div class="d-flex justify-content-center gap-2">
+                            <a href="#" class="btn btn-outline-primary btn-sm">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-primary btn-sm">
+                                <i class="bi bi-envelope"></i>
+                            </a>
+                            <a href="{{ url_for('appointment') }}" class="btn btn-primary btn-sm">
+                                <i class="bi bi-calendar-check me-1"></i>Book
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Additional Team Members -->
+<section class="py-5" style="background: rgba(255,255,255,0.1);">
+    <div class="container">
+        <div class="glass-card mb-5">
+            <div class="text-center">
+                <h2 class="display-5 fw-bold mb-4">Support Team</h2>
+                <p class="lead mb-0">Our dedicated support staff ensures your comfort and satisfaction</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="doctor-card">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop" alt="Dr. Lisa Thompson" class="doctor-image">
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. Lisa Thompson</h3>
+                        <p class="doctor-specialty">Dental Hygienist</p>
+                        <p class="doctor-experience">8+ years experience</p>
+                        <p class="mb-3">Specializes in preventive care and patient education for optimal oral health.</p>
+                        <div class="d-flex justify-content-center gap-2">
+                            <a href="#" class="btn btn-outline-primary btn-sm">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-primary btn-sm">
+                                <i class="bi bi-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="doctor-card">
+                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop" alt="Dr. David Park" class="doctor-image">
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. David Park</h3>
+                        <p class="doctor-specialty">Oral Surgeon</p>
+                        <p class="doctor-experience">12+ years experience</p>
+                        <p class="mb-3">Expert in complex dental surgeries and implant procedures.</p>
+                        <div class="d-flex justify-content-center gap-2">
+                            <a href="#" class="btn btn-outline-primary btn-sm">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-primary btn-sm">
+                                <i class="bi bi-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="doctor-card">
+                    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop" alt="Dr. Maria Garcia" class="doctor-image">
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. Maria Garcia</h3>
+                        <p class="doctor-specialty">Pediatric Dentist</p>
+                        <p class="doctor-experience">10+ years experience</p>
+                        <p class="mb-3">Specializes in children's dental care with a gentle, patient approach.</p>
+                        <div class="d-flex justify-content-center gap-2">
+                            <a href="#" class="btn btn-outline-primary btn-sm">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-primary btn-sm">
+                                <i class="bi bi-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5">
+    <div class="container">
+        <div class="glass-card text-center">
+            <h2 class="display-5 fw-bold mb-4">Ready to Meet Our Team?</h2>
+            <p class="lead mb-4">Schedule a consultation with one of our experienced dental professionals.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="{{ url_for('appointment') }}" class="btn btn-primary btn-lg">
+                    <i class="bi bi-calendar-check me-2"></i>Book Consultation
+                </a>
+                <a href="{{ url_for('contact') }}" class="btn btn-outline-primary btn-lg">
+                    <i class="bi bi-telephone me-2"></i>Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 
