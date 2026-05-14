@@ -71,16 +71,44 @@ document.addEventListener('DOMContentLoaded', function() {
         const forms = document.querySelectorAll('.needs-validation');
         
         forms.forEach(form => {
-            form.addEventListener('submit', function(event) {
+            form.addEventListener('submit', async function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+
                 if (!form.checkValidity()) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                } else {
-                    // Show success message
-                    showNotification('Thank you! Your message has been sent successfully.', 'success');
+                    form.classList.add('was-validated');
+                    return;
                 }
                 
-                form.classList.add('was-validated');
+                // Show loading state
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
+                submitBtn.disabled = true;
+
+                try {
+                    const formData = new FormData(form);
+                    const response = await fetch(form.action, {
+                        method: form.method,
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        showNotification('Thank you! Your message has been sent successfully.', 'success');
+                        form.reset();
+                        form.classList.remove('was-validated');
+                    } else {
+                        showNotification('Failed to send message. Please try again.', 'error');
+                    }
+                } catch (error) {
+                    showNotification('An error occurred. Please try again.', 'error');
+                } finally {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }
             });
             
             // Real-time validation
