@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, flash, url_for
 from flask_mail import Mail, Message
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='.')
 app.secret_key = os.urandom(24)  # Needed for flash messages
 
 # Flask-Mail configuration (Gmail SMTP)
