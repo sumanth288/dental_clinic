@@ -47,7 +47,7 @@ def appointment():
         Message: {data.get('message', '')}
         """
         try:
-            msg = Message(subject, recipients=['sumanthreddy695@gmail.com'], body=body)
+            msg = Message(subject, recipients=['ramanasdentalclinic@gmail.com'], body=body)
             mail.send(msg)
             flash('Appointment request sent successfully!', 'success')
         except Exception as e:
@@ -66,7 +66,7 @@ def contact():
         Message: {data.get('message', '')}
         """
         try:
-            msg = Message(subject, recipients=['sumanthreddy112000@gmail.com'], body=body)
+            msg = Message(subject, recipients=['ramanasdentalclinic@gmail.com'], body=body)
             mail.send(msg)
             flash('Your message has been sent successfully!', 'success')
         except Exception as e:
