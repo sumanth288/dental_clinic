@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <script>(function(){var t=localStorage.getItem('theme')||(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description"
         content="Professional dental care with advanced technology at Ramana's Dental & Implant Centre. Root canal, implants, smile design, and more.">
@@ -127,6 +128,13 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6">
+                                        <label for="age" class="form-label">Age *</label>
+                                        <input type="number" class="form-control" id="age" name="age" min="1" max="120" required>
+                                        <div class="invalid-feedback">
+                                            Please provide your age.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
                                         <label for="date" class="form-label">Preferred Date *</label>
                                         <input type="date" class="form-control" id="date" name="date" required>
                                         <div class="invalid-feedback">
@@ -166,7 +174,7 @@
                                             <option value="Crown & Bridges">Crown & Bridges</option>
                                             <option value="Fixed Dentures">Fixed Dentures</option>
                                             <option value="Orthodontic Treatment">Orthodontic Treatment</option>
-                                            <option value="Aligners">Aligners</option>
+                                            <option value="Invisalign Aligners">Invisalign Aligners</option>
                                             <option value="Emergency Care">Emergency Care</option>
                                             <option value="Other">Other</option>
                                         </select>
@@ -281,7 +289,7 @@
                         <li><a href="#" class="footer-link">Crown & Bridges</a></li>
                         <li><a href="#" class="footer-link">Fixed Dentures</a></li>
                         <li><a href="#" class="footer-link">Orthodontic Treatment</a></li>
-                        <li><a href="#" class="footer-link">Aligners</a></li>
+                        <li><a href="#" class="footer-link">Invisalign Aligners</a></li>
                     </ul>
                 </div>
 
@@ -316,36 +324,20 @@
     <!-- Custom JS -->
     <script src="static/js/main.js"></script>
     <script>
-        // Theme switching logic
+        // Theme switching logic (initial theme is already applied pre-paint by the <head> script)
         function setTheme(theme) {
-            if (theme === 'dark') {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
-                document.getElementById('theme-toggle-icon').className = 'bi bi-sun';
-            } else {
-                document.documentElement.setAttribute('data-theme', 'light');
-                localStorage.setItem('theme', 'light');
-                document.getElementById('theme-toggle-icon').className = 'bi bi-moon';
-            }
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            document.getElementById('theme-toggle-icon').className = theme === 'dark' ? 'bi bi-sun' : 'bi bi-moon';
         }
-        // On load, set theme from localStorage or system
-        (function () {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                setTheme(savedTheme);
-            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                setTheme('dark');
-            } else {
-                setTheme('light');
-            }
-        })();
-        // Toggle button event
         document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('theme-toggle-icon').className =
+                document.documentElement.getAttribute('data-theme') === 'dark' ? 'bi bi-sun' : 'bi bi-moon';
             const btn = document.getElementById('theme-toggle');
             if (btn) {
                 btn.addEventListener('click', function () {
-                    const current = localStorage.getItem('theme') === 'dark' ? 'dark' : 'light';
-                    setTheme(current === 'dark' ? 'light' : 'dark');
+                    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+                    setTheme(isDark ? 'light' : 'dark');
                 });
             }
         });
