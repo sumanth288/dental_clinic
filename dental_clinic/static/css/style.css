@@ -367,8 +367,9 @@ body {
 
 .doctor-image {
     width: 100%;
-    height: 250px;
+    height: 340px;
     object-fit: cover;
+    object-position: center 15%;
     transition: transform 0.3s ease;
     flex-shrink: 0;
 }
@@ -569,7 +570,7 @@ body {
     }
 
     .doctor-image {
-        height: 200px;
+        height: 280px;
     }
 
     .doctor-info {
@@ -727,7 +728,7 @@ body {
     }
 
     .doctor-image {
-        height: 220px;
+        height: 300px;
     }
 
     .btn {
@@ -762,7 +763,7 @@ body {
     }
 
     .doctor-image {
-        height: 240px;
+        height: 320px;
     }
 
     .navbar-brand {
