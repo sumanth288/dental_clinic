@@ -429,6 +429,15 @@ body {
     padding: 0.75rem 1rem;
     backdrop-filter: blur(5px);
     transition: all 0.3s ease;
+    color-scheme: light;
+}
+
+/* The <option> list is a native OS popup that inherits the <select>'s own color
+   (which changes with theme) but not its background reliably. Give options a fixed,
+   explicit look so the dropdown is always readable, independent of light/dark theme. */
+select.form-select option {
+    background-color: #ffffff !important;
+    color: #2c3e50 !important;
 }
 
 .form-select:focus {
@@ -2009,38 +2018,5 @@ img {
     border: 1px solid rgba(255, 255, 255, 0.25) !important;
 }
 
-/* Dark mode: select dropdown popup styling */
-[data-theme="dark"] select.form-select,
-[data-theme="dark"] select.form-select option {
-    background-color: #23243a !important;
-    color: #fff !important;
-}
-
-[data-theme="dark"] select.form-select:focus option {
-    background-color: #23243a !important;
-    color: #fff !important;
-}
-
-[data-theme="dark"] select.form-select optgroup {
-    background-color: #23243a !important;
-    color: #fff !important;
-}
-
-/* For Webkit browsers (Chrome, Edge, Safari) */
-[data-theme="dark"] select.form-select::-webkit-input-placeholder {
-    color: #b0b0b0 !important;
-}
-
-[data-theme="dark"] select.form-select::-webkit-scrollbar {
-    background: #23243a !important;
-}
-
-[data-theme="dark"] select.form-select::-webkit-scrollbar-thumb {
-    background: var(--primary-color) !important;
-}
-
-/* For Firefox */
-[data-theme="dark"] select.form-select:-moz-focusring {
-    color: #fff !important;
-    background: #23243a !important;
-}
+/* The select's closed box still gets dark styling from .form-select above and
+   [data-theme="dark"] .form-select below; only the native popup list is pinned light. */

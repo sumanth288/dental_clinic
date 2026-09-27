@@ -72,15 +72,49 @@ document.addEventListener('DOMContentLoaded', function() {
         
         forms.forEach(form => {
             form.addEventListener('submit', function(event) {
-                if (!form.checkValidity()) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                } else {
-                    // Show success message
-                    showNotification('Thank you! Your message has been sent successfully.', 'success');
-                }
-                
+                event.preventDefault();
+                event.stopPropagation();
                 form.classList.add('was-validated');
+
+                if (!form.checkValidity()) {
+                    return;
+                }
+
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = 'Sending...';
+                }
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                })
+                    .then(async response => {
+                        // Web3Forms replies with JSON for AJAX requests but can fall back to an
+                        // HTML success page depending on how the request looks, so don't assume JSON.
+                        let data = null;
+                        try { data = await response.json(); } catch (e) { /* non-JSON response */ }
+
+                        if (response.ok && (!data || data.success !== false)) {
+                            showNotification('Thank you! Your message has been sent successfully.', 'success');
+                            form.reset();
+                            form.classList.remove('was-validated');
+                        } else {
+                            showNotification((data && data.message) || 'Something went wrong. Please try again.', 'error');
+                        }
+                    })
+                    .catch(() => {
+                        showNotification('Something went wrong. Please check your connection and try again.', 'error');
+                    })
+                    .finally(() => {
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.innerHTML = originalBtnHtml;
+                        }
+                    });
             });
             
             // Real-time validation
